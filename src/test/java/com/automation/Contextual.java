@@ -8,11 +8,11 @@ import io.appium.java_client.touch.offset.ElementOption;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.Watchable;
 import java.time.Duration;
 
 public class Contextual {
@@ -56,6 +56,7 @@ From the main view, navigate through Views -> Expandable Lists -> Custom Adapte 
 
 
 
+
         WebElement sampleAction = driver.findElement(By.xpath("//android.widget.TextView[@text='Sample action']"));
         sampleAction.click();
 
@@ -81,6 +82,7 @@ From the main view, navigate through Views -> Expandable Lists -> Custom Adapte 
 
         WebElement views = driver.findElementByAccessibilityId("Views");
         views.click();
+
 
         driver.findElementsByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Lists\"));");
 

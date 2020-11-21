@@ -26,11 +26,14 @@ public class ApiDemo {
         desiredCapabilities.setCapability("platformVersion","7.0");
         desiredCapabilities.setCapability("deviceName","Pixel_2");
         desiredCapabilities.setCapability("automationName","UiAutomator2");
-        desiredCapabilities.setCapability("app","C:\\Users\\Tahsin\\IdeaProjects\\AppiumAutomationTesting\\apidemos.apk");
+        desiredCapabilities.setCapability("app",System.getProperty("user.dir")+"/apidemos.apk");
 
         AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http:localhost:4723/wd/hub"),desiredCapabilities);
 
         Thread.sleep(5000);
+
+        System.out.println(System.getProperty("user.dir"));
+        System.out.println(System.getProperty("user.home"));
 
         WebElement preference = driver.findElementByAccessibilityId("Preference");
         preference.click();
@@ -67,5 +70,6 @@ public class ApiDemo {
         driver.closeApp();
 
     }
+
 
 }
