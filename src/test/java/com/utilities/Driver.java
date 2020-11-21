@@ -39,8 +39,8 @@ public class Driver {
                 case "Google Pixel 3":
 
                     desiredCapabilities.setCapability("platformName", "Android");
-                    desiredCapabilities.setCapability("platformVersion", "7.0");
-                    desiredCapabilities.setCapability("deviceName", "Pixel_2");
+                    desiredCapabilities.setCapability("platformVersion", "10.0");
+                    desiredCapabilities.setCapability("deviceName", "Google Pixel 3");
                     desiredCapabilities.setCapability("automationName", "UiAutomator2");
                     desiredCapabilities.setCapability("app", System.getProperty("user.dir")+"/apidemos.apk");
                     try {
